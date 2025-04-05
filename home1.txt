@@ -1,1 +1,2 @@
 Welcome to RY
+Learn Full Stack Development and AI course
