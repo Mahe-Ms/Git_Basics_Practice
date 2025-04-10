@@ -13,6 +13,20 @@
     <input type="number_box2" id="length">
     <button id="sub_btn">Submit</button>
 
+    <div> Q 2). </div>
+
+    <input type="numbers" id="even_odd_no">
+    <button id="sub_btn_odd_even">Submit</button>
+
+    <div> Q 3). </div>
+    <input type="text1" id="swap1">
+    <input type="text2" id="swap2">
+    <button id="swap_btn">Submit</button>
+
+    <div> Q 5). </div>
+    <input type="string" id="palindrome">
+    <button id="pali_btn">Submit</button>
+
     <script>
 
         //Q1. Write a JavaScript program to calculate the area of a rectangle given its length and width.
@@ -22,8 +36,6 @@
           document.getElementById("sub_btn").addEventListener("click", function() {
             let input1 = Number(document.getElementById("width").value);
             let input2 = Number(document.getElementById("length").value);
-            
-            // multiplyTwoNumbers(input1, input2)
 
             console.log("Multipling Two Numbers: " + (input1 * input2));
             
@@ -44,7 +56,42 @@
 
         //Q2. Write a JavaScript program to check whether a given number is even or odd.
 
+        document.getElementById("sub_btn_odd_even").addEventListener("mouseover", function() {
+          var number = document.getElementById("even_odd_no").value;
+          console.log(number);
+          
+          if (number %2 == 0) {
+            console.log(" The Number is even");
+          } else {
+            console.log(" The Number is odd ");
+          }
+        })
 
+        //Q3. Write a JavaScript program to swap the values of two variables.
+         
+        document.getElementById("swap_btn").addEventListener("click", function() {
+          let text1 = document.getElementById("swap1").value;
+          let text2 = document.getElementById("swap2").value;
+          console.log(text2 , text1);
+        })
+
+        //Q4. Write a function to reverse a given string without using reverse( method).
+
+        //Q5. Write a JavaScript program to check if a given string is a palindrome.
+
+        document.getElementById("pali_btn").addEventListener("click", function() {
+          let string = document.getElementById("palindrome").value;
+          console.log(string);
+
+          if (string = re) {
+            console.log("TRUE, It is a palindrome");
+          } else if (string == string) {
+            console.log("FALSE, It is not a palindrome");  
+          } else {
+            console.log("FALSE, It is not a palindrome");
+            
+          }
+        })
         
 
     </script>
