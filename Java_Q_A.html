@@ -27,6 +27,14 @@
     <input type="string" id="palindrome">
     <button id="pali_btn">Submit</button>
 
+    <div> Q 7). </div>
+    <input type="no" id="prime_no">
+    <button id="no_prime">Submit</button>
+
+    <div> Q 17). </div>
+    <input type="year" id="leap_year">
+    <button id="leap_btn">Submit</button>
+
     <script>
 
         //Q1. Write a JavaScript program to calculate the area of a rectangle given its length and width.
@@ -37,7 +45,7 @@
             let input1 = Number(document.getElementById("width").value);
             let input2 = Number(document.getElementById("length").value);
 
-            console.log("Multipling Two Numbers: " + (input1 * input2));
+            console.log(" ANS:01, Multipling Two Numbers: " + (input1 * input2));
             
           } )
 
@@ -61,7 +69,7 @@
           console.log(number);
           
           if (number %2 == 0) {
-            console.log(" The Number is even");
+            console.log(" The Number is even ");
           } else {
             console.log(" The Number is odd ");
           }
@@ -70,28 +78,187 @@
         //Q3. Write a JavaScript program to swap the values of two variables.
          
         document.getElementById("swap_btn").addEventListener("click", function() {
-          let text1 = document.getElementById("swap1").value;
-          let text2 = document.getElementById("swap2").value;
-          console.log(text2 , text1);
+          var firstWord = document.getElementById("swap1").value;
+          var secondWord = document.getElementById("swap2").value;
+
+          return secondWord, firstWord;
+
+          console.log("The swaped values are :" + (secondWord, firstWord));
+          
         })
 
         //Q4. Write a function to reverse a given string without using reverse( method).
 
+        
+        
+
         //Q5. Write a JavaScript program to check if a given string is a palindrome.
 
-        document.getElementById("pali_btn").addEventListener("click", function() {
-          let string = document.getElementById("palindrome").value;
-          console.log(string);
+        function palindrome(str) {
+          const reversedStr = str.split("").reverse().join("");
+          return str === reversedStr;
+        }
+        console.log(("ANS:05," + palindrome("madam")));
+        
 
-          if (string = re) {
-            console.log("TRUE, It is a palindrome");
-          } else if (string == string) {
-            console.log("FALSE, It is not a palindrome");  
-          } else {
-            console.log("FALSE, It is not a palindrome");
+        //Q6. Write a Javascript program to find the factorial of a given number.
+        
+        // for(let i = 0; i <= 5; i++) {
+        //   console.log(i);
+        //   if(i == 5) {
+        //     break;
+        //     console.log("Factorial of 5 is :" + i);
             
-          }
+        //   }
+          
+        // }
+
+        //Q7. Write a Javascript program to check whether a given number is a prime number.
+
+        document.getElementById("no_prime").addEventListener("click", function() {
+          let primeNumber = document.getElementById("prime_no").value;
+          console.log(primeNumber);
+
+          if (primeNumber <= 1) {
+            alert("It is not a prime number");
+          }else if (primeNumber %2 == 0) {
+            alert("It is not a prime number");
+          }else {
+            alert("It is a prime number");
+          }  
         })
+
+        //Q8. Write a Javascript program to find the sum of all elements in an array.
+
+        let myArray = [10, 20, 30, 40, 50];
+        let sum = 0;
+        for(let i in myArray) {
+          sum += myArray[i];  
+        }
+        console.log(" ANS:08, The sum of all the elements is :" + sum);
+
+        //Q9. Write a Javascript program to find the maximum and minimum numbers in an array.
+
+        let array = [7, 2, 9, 4, 10];
+
+         let minivalue = Math.min(...array);             
+         console.log(" ANS:09, The maximum munber is :" + minivalue);                                 // comment to see the second answer.
+         
+         let maxivalue = Math.max(...array);             
+         console.log("ANS:09, The minimum number is :" + maxivalue);
+        
+        //Q10. Write a Javascript program to find the second largest number in an array.
+
+        let myNumbersbe = [10, 20, 4, 45, 99, 99];
+
+        let largestNo = Math.max(...myNumbersbe);
+        myNumbersbe.indexOf(largestNo);
+        myNumbersbe.splice(5, 5);
+
+        let secondlargestno = Math.max(...array);
+        console.log("ANS:10, Second Largest Number is :" + myNumbersbe);
+        
+
+        //Q11. Write a Javascript program to check if a string contains a specific substring.
+
+        let myStringBe = "Hello, Welcome to Javascript";
+        let subString = "Javascript";
+
+        console.log("ANS:11, " + myStringBe.includes(subString));
+        
+
+        //Q12. Write a Javascript program to sort an array in ascendind and descending order.
+        
+        let arr = [5, 2, 8, 1, 4];
+
+        function myAscendingNum(arr) {
+          let ascendArr = arr.sort((a,b) => a-b);  
+          return ascendArr;
+        }
+        console.log((myAscendingNum(arr)));
+
+        function myDescendingNum(arr) {
+          let descendArr = arr.sort((a,b) => b-a);
+          return descendArr;
+        }
+        console.log((myDescendingNum(arr)));
+        
+
+        //Q13. Write a Javascript program to merge two arrays and remove duplicates.
+
+        let Aarray = [1,2,3];
+        let Barray = [3,4,5];
+
+        let Carray = [...new Set(Aarray.concat(Barray))];
+        console.log("The merged array is:" + Carray);
+        
+
+        //Q14. Write a Javascript program to check if a given number is a perfect square.
+
+          function perfectSquare(num) {
+            let x = 0;
+            while (x * x < num) {
+              x++;
+            }
+            return x * x === num;
+          }
+          console.log("ANS:14," + perfectSquare(16));
+          
+        //Q15. Write a Javascript program to find the longest word in a given sentences.
+
+
+
+        //Q16. Write a Javascript program to find the common elements between two arrays.
+
+       
+        
+        //Q17. Check if a year is a leap year.
+
+        document.getElementById("leap_btn").addEventListener("click", function() {
+          let leapYear = document.getElementById("leap_year").value;
+
+          if (leapYear %4 == 0) {
+            alert("It is a leap year");
+          } else {
+            alert("It is not a leap year");
+          }
+
+        })
+
+        
+        //Q18. Write a Javascipt program to find the missing number in an array of consecutive numbers.
+
+        
+
+        //Q19. Write a program to print the multiplication table of a number.
+        
+        var a = 10;
+        var b;
+
+        for (var i = 1; i <= 10; i++) {
+          b = a * i;
+          console.log("" +a+ "*" +i+ "=", + b); 
+        }
+
+        //Q20. Write a program to find the count of vowels in a string.
+
+        let str = 'hello world'
+        let count = 0;
+        const vowels = ['a', 'e', 'i', 'o', 'u']
+
+        for(let s of str.toLowerCase()) {
+          if(vowels.includes(s)){
+            count++
+          }
+        }
+        console.log("ANS:20," + count);
+        
+
+        //Q21. Write a Javascript program to remove white spaces from a string.
+
+        const sentences = "Hello World"
+
+        console.log("ANS:21," + sentences.replace(/\s/g, ""));
         
 
     </script>
